@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="#D8111010"
+    tools:context=".FullScreen">
+
+
+    <Button
+        android:id="@+id/Player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="openDefault"
+        android:text="Default App ->"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="RemoveThis"
+        android:background="@drawable/ic_delete_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="DeleteThis"
+        android:background="@drawable/ic_delete_forever_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Share"
+        android:background="@drawable/ic_share_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button3" />
+
+    <VideoView
+        android:id="@+id/VideoView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/Player" />
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/ImageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/Player" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
